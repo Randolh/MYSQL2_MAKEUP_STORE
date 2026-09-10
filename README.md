@@ -110,10 +110,10 @@ A continuación se detalla la definición de claves primarias y foráneas por ca
 
 * **empleados** $\rightarrow$ **empleado_areas** $\leftarrow$ **areas**: Relación Muchos a Muchos (N:M). Un empleado puede estar asignado a una o más áreas (venta, bodega, administración).
 * **categorias** $\rightarrow$ **productos**: Relación Uno a Muchos (1:N). Una categoría agrupa múltiples productos.
-* **productos** $\rightarrow$ **detalles_cosmeticos**: Relación Uno a Uno (1:1). Información adicional para productos cosméticos.
-* **productos** $\rightarrow$ **detalles_cuidado_piel**: Relación Uno a Uno (1:1). Información adicional para productos de cuidado de la piel.
-* **productos** $\rightarrow$ **detalles_perfumes**: Relación Uno a Uno (1:1). Información adicional para perfumes.
-* **productos** $\rightarrow$ **detalles_accesorios**: Relación Uno a Uno (1:1). Información adicional para accesorios.
+* **productos** $\rightarrow$ **detalles_cosmeticos**: Relación Uno a Uno Opcional (1:0..1). Un producto puede tener como máximo un registro de detalle si corresponde a cosméticos.
+* **productos** $\rightarrow$ **detalles_cuidado_piel**: Relación Uno a Uno Opcional (1:0..1). Información adicional opcional exclusiva para productos de cuidado de la piel.
+* **productos** $\rightarrow$ **detalles_perfumes**: Relación Uno a Uno Opcional (1:0..1). Información adicional opcional exclusiva para perfumes.
+* **productos** $\rightarrow$ **detalles_accesorios**: Relación Uno a Uno Opcional (1:0..1). Información adicional opcional exclusiva para accesorios.
 * **clientes** $\rightarrow$ **ventas**: Relación Uno a Muchos (1:N). Un cliente puede registrar múltiples compras.
 * **empleados** $\rightarrow$ **ventas**: Relación Uno a Muchos (1:N). Un empleado puede atender múltiples ventas.
 * **ventas** $\rightarrow$ **detalle_ventas** $\leftarrow$ **productos**: Relación Muchos a Muchos (N:M). Resuelta mediante tabla de detalle para asociar productos y cantidades a cada venta.
